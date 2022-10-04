@@ -1,0 +1,193 @@
+HackerRank 
+----------
+Website - www.hackerrank.com
+
+Gmail Account
+
+HackerRank Account 
+
+--------------------------------------------------------
+Operators [Java]
+*********
+
+1. Utopian Tree:
+----------------
+Diagram 1
+
+class Ex1
+{
+	public static void main(String[] args) 
+	{
+	 int n = 5;
+     int t = 1;
+
+	 for (int i = 1; i <= n; i++)
+        {
+			if (i%2 == 0)
+            {
+                t = t+1;
+            }
+            else
+            {
+                t = t*2;
+            }
+		}
+	System.out.println(t);
+	}
+
+}
+o/p:
+----
+14
+
+-------------------
+HackerRank
+----------
+class Ex1
+{
+	static int utopianTree (int n)
+	{
+     int t = 1;
+
+	 for (int i = 1; i <= n; i++)
+        {
+			if (i%2 == 0)
+            {
+                t = t+1;
+            }
+            else
+            {
+                t = t*2;
+            }
+		}
+	return t ; 
+	}
+
+	public static void main(String[] args) 
+	{
+	int n = 5;
+	int height = utopianTree(n);
+	System.out.println(height);
+	}
+
+}
+
+o/p:
+----
+14
+--------------------------------------------------------------------------
+2. Cats and a Mouse
+-------------------
+Diagram 2
+
+class Ex2
+{
+	static String catAndMouse  (int x, int y, int z)
+	{
+    int d1 = 0;
+    int d2 = 0;
+      
+	if (x<=z)
+    {  
+        d1 = z-x;
+    }
+    else
+    {
+        d1 = x-z;
+    }
+
+	if (y<=z)
+    {
+        d2 = z-y;
+    }
+    else
+    {
+        d2 = y-z;
+    }
+
+
+	if (d1 == d2)
+    {
+        return "Mouse C";
+    }
+    else if(d1 < d2)
+    {
+        return "Cat A ";
+    }
+    else 
+    {
+        return "Cat B ";
+    }
+
+
+	}
+
+	public static void main(String[] args) 
+	{
+	int x = 2;
+    int y = 7;
+    int z = 4;
+    
+    String winner = catAndMouse(x,y,z);
+    System.out.println(winner);
+	}
+
+}
+
+----------------------------------------------------------
+1 Star
+-----------------------------------------------------------
+
+3. Viral Advertising
+---------------------
+Diagram 3
+
+class Ex3
+{
+	static int viralAdvertising  (int n)
+	{
+    
+	int shared = 5;
+    int like = 0;
+    int total_like = 0;
+    
+	for(int i = 1; i<=n; i++)
+        {
+            like = shared/2;
+            total_like = total_like + like;
+            shared = like * 3;
+        }
+
+        return total_like;
+    }
+
+	public static void main(String[] args) 
+	{
+	int n = 5;
+    System.out.println(viralAdvertising(n));
+	}
+
+}
+
+---------------------------------------------------------
+Assignments:
+------------
+
+4. A very Big Sum 
+5. Staircase
+
+----------------------------------------------------------
+
+Cheat Code - sandesh6460
+
+----------------------------------------------------------
+
+Study Online - Google Play Store 
+
+----------------------------------------------------------
+
+
+
+
+
+
