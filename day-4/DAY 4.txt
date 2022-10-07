@@ -1,0 +1,316 @@
+Arrays:
+-------
+1. Compare the Triplets
+-----------------------
+Diagram 1
+
+import java.util.*;
+
+class Ex1
+{
+
+	static ArrayList<Integer> compareTriplets(ArrayList<Integer> a, ArrayList<Integer> b) 
+	{
+	int alice = 0;
+    int bob = 0;
+	for (int i=0; i<3 ;i++ )
+    {
+        if(a.get(i)>b.get(i))
+        {
+            alice++;
+        }
+		else if (a.get(i)<b.get(i))
+        {
+            bob++;
+        }
+	}
+	ArrayList<Integer> res = new ArrayList<Integer>();
+	res.add(alice) ;
+    res.add(bob) ;
+    return res;
+	}
+    
+	public static void main(String[] args) 
+	{
+	ArrayList<Integer> a = new ArrayList<Integer>();
+	ArrayList<Integer> b = new ArrayList<Integer>();
+	a.add(5);
+	a.add(6);
+    a.add(7);
+    b.add(3);
+	b.add(6);
+    b.add(10);
+    System.out.println(a);
+	System.out.println(b);
+	System.out.println(compareTriplets(a,b));
+	}
+}
+
+o/p:
+----
+[5, 6, 7]
+[3, 6, 10]
+[1, 1]
+
+-----------------------------------------------------------------------
+HackerRank:
+-----------
+static ArrayList<Integer> compareTriplets(ArrayList<Integer> a, ArrayList<Integer> b) 
+	{
+	int alice = 0;
+    int bob = 0;
+	for (int i=0; i<3 ;i++ )
+    {
+        if(a.get(i)>b.get(i))
+        {
+            alice++;
+        }
+		else if (a.get(i)<b.get(i))
+        {
+            bob++;
+        }
+	}
+	ArrayList<Integer> res = new ArrayList<Integer>();
+	res.add(alice) ;
+    res.add(bob) ;
+    return res;
+	}
+
+-----------------------------------------------------------------------
+2. Apple and Orange
+-------------------
+Diagram 2
+
+import java.util.ArrayList;
+
+class Ex2
+{
+
+	static void countApplesAndOranges(int s, int t, int a, int b, ArrayList<Integer> apples, ArrayList<Integer> oranges)
+	{
+   
+    int appleCount = 0;
+    int orangeCount = 0;
+
+	for (int i=0; i<apples.size();i++)
+		{
+			if(a+apples.get(i) >= s && a+apples.get(i) <= t)
+		   {
+				appleCount++;
+		   }
+		}
+
+	
+	for (int i=0; i<oranges.size() ;i++ )
+    {
+        if(b+oranges.get(i) >= s && b+oranges.get(i) <= t)
+        {
+            orangeCount++;
+        }
+    }
+
+    System.out.println(appleCount);
+    System.out.println(orangeCount);
+    
+
+	}
+    public static void main(String[] args) 
+	{
+	ArrayList<Integer> apples = new ArrayList<Integer>();
+	ArrayList<Integer> oranges = new ArrayList<Integer>();
+	apples.add(2);
+	apples.add(4);
+    apples.add(-1);
+    apples.add(7);
+	oranges.add(2);
+    oranges.add(-2);
+	oranges.add(-7);
+    System.out.println(apples);
+	System.out.println(oranges);
+
+	int s = 7;
+	int t = 10;
+	int a = 4;
+	int b = 12;
+    
+    countApplesAndOranges(s,t,a,b,apples,oranges);
+	}
+}
+
+o/p:
+----
+[2, 4, -1, 7]
+[2, -2, -7]
+1
+1
+
+------------------------------------------------------------
+HackerRank:
+-----------
+
+    public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
+    // Write your code here
+	int appleCount = 0;
+    int orangeCount = 0;
+
+    for (int i=0; i<apples.size();i++)
+        {
+            if(a+apples.get(i) >= s && a+apples.get(i) <= t)
+           {
+                appleCount++;
+           }
+        }
+
+    
+    for (int i=0; i<oranges.size() ;i++ )
+    {
+        if(b+oranges.get(i) >= s && b+oranges.get(i) <= t)
+        {
+            orangeCount++;
+        }
+    }
+
+    System.out.println(appleCount);
+    System.out.println(orangeCount);
+    }
+    
+}
+
+------------------------------------------------------------
+3. Breaking the Records :
+------------------------
+Diagram 3
+
+import java.util.ArrayList;
+
+class Ex3
+{
+ 
+    static ArrayList<Integer> breakingRecords(ArrayList<Integer> scores) 
+	 {
+    
+     int max = scores.get(0);
+     int min = scores.get(0);
+     int maxCount = 0;
+     int minCount = 0;
+	
+	for (int i=1; i<scores.size() ;i++ )
+    {
+		if(scores.get(i)>max)
+        {
+           max = scores.get(i);
+           maxCount++;
+        }
+
+        if(scores.get(i)<min)
+        {
+           min = scores.get(i);
+           minCount++;
+        }
+	}
+
+	ArrayList<Integer> res = new ArrayList<Integer>();
+    res.add(maxCount);
+    res.add(minCount);
+    return res;
+    }
+
+
+	public static void main(String[] args) 
+	{
+	ArrayList<Integer> scores = new ArrayList<Integer>();
+	scores.add(10);
+	scores.add(5);
+    scores.add(20);
+    scores.add(20);
+	scores.add(4);
+    scores.add(5);
+	scores.add(2);
+	scores.add(25);
+	scores.add(1);
+    System.out.println(scores);
+    
+    System.out.println(breakingRecords(scores));
+	}
+}
+
+------------------------------------------------------------
+4.Subarray Division:
+--------------------
+Next Class 
+
+
+Assignments:
+------------
+5. The Hurdle race
+6. Angry Professor 
+7. Circular array rotation
+8. Simple Array Sum 
+9. Mini Max Sum 
+10. Birthday Cake Candles 
+11. Migratory Birds
+------------------------------------------------------------
+
+HackerRank 4 Star Certificate 
+
+DAY 1 - DAY 4
+
+
+Certificate - Study Online 
+--------------------------
+1. 4/5 - Live Online/ Recorded Video 
+2. Notes [Day 1 - Day 5] - sandesh.studyonline@gmail.com [CamScanner]
+3. HackerRank 4 Star Certificate
+
+--------------------------------------------------------------
+
+60+ -- CS -  [12 Students - FREE]
+60+ -- IS -  [12 Students - FREE]
+80+ -- ECE - [16 Students - FREE]
+
+Course:
+-------
+Java Full Stack 
+Python Full Stack 
+Software Testing FullStack
+
+--------------------------------------------------------------
+Study Online 		- Mobile Application 
+
+studyonlinetech.com - website 
+
+Workshop
+--------
+	HackerRank BootCamp-oct 3
+
+https://www.studyonlinetech.com/courses/42830-hackerrank-bootcamp-oct-3
+
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
