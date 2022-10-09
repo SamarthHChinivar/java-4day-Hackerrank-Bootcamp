@@ -1,0 +1,173 @@
+Strings:
+--------
+1. Alternating Characters
+-------------------------
+Diagram 1
+
+class Ex1
+{
+	static int alternatingCharacters(String s)
+	{
+	int count = 0;
+
+	for (int i=1; i<s.length();i++)
+		{
+			if (s.charAt(i)==s.charAt(i-1))
+			{
+				count++;
+			}
+		}
+		return count;
+
+	}
+	public static void main(String[] args)
+	{
+		String s = "AABAAB";
+		System.out.println(alternatingCharacters(s));
+	}
+}
+
+o/p:
+----
+2
+
+----------------------------------------------------------------------------------------------------
+2. Repeated String:
+-------------------
+Diagram 2
+
+class Ex2
+{
+	static long repeatedString(String s, long n)
+	{
+		long count = 0;
+
+		for (int i=0; i<s.length();i++)
+		{
+			if (s.charAt(i)=='a')
+			{
+				count++;
+			}
+		}
+		count = count *(n/s.length());
+
+		for (int i =0;i<(n%s.length()) ;i++ )
+		{
+			if (s.charAt(i)=='a')
+			{
+				count++;
+			}
+		}
+		return count;
+	
+	}
+	public static void main(String[] args)
+	{
+		String s = "abab";
+		long n = 10;
+		System.out.println(repeatedString(s,n));
+	}
+}
+
+o/p:
+----
+5
+
+----------------------------------------------------------------------------------
+3. Love Letter Mystery
+----------------------
+
+Diagram 3
+
+class Ex3
+{
+	static int theLoveLetterMystery(String s)
+	{
+		int count = 0;
+		int t = 0;
+		char c1 = ' ';
+		char c2 = ' ';
+		
+		int i = 0;
+		int j = s.length()-1;
+		
+		while(i<j)
+		{
+			c1 = s.charAt(i);
+			c2 = s.charAt(j);
+
+			if (c1>c2)
+			{
+				t = c1-c2;
+			}
+			else
+			{
+				t = c2-c1;
+			}
+			count = count+t;
+			i++;
+			j--;
+            
+		}
+
+		return count;
+
+	}
+
+	public static void main(String[] args)
+	{
+		String s = "abcd";
+		System.out.println(theLoveLetterMystery(s));
+	}
+}
+
+o/p:
+----
+4
+----------------------------------------------------------------------------------
+
+4. Game of Thrones
+------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
